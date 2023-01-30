@@ -1,0 +1,561 @@
+.s-hero {
+    width: 100%;
+    height: 78.6rem;
+    background: url(../img/bg-hero.svg) no-repeat center center;
+    padding-top: 17.5rem;
+        .container {
+            @include flex (row, flex-start, space-between);
+        }
+
+        .text {
+            width: 100%;
+            max-width: 68.4rem;
+                h3 {
+                    color: #FFFFFF;
+                    opacity: 0.8;
+                    font-weight: 600;
+                    margin-bottom: 3.1rem;
+                }
+               h1 {
+                color: #FFFFFF;
+                margin-bottom: 4.2rem;
+               } 
+               button {
+                margin-bottom: 5.9rem;
+            }
+                ul {
+                    width: 100%;
+                    max-width: 61.5rem;
+                    @include flex (row, center, space-between);
+                        li {
+                            display: flex;
+                            align-items: center;
+                                .icon {
+                                    @include flex (row, center, center);
+                                    width: 48px;
+                                    height: 48px;
+                                    border-radius: 50%;
+                                    background: linear-gradient(180deg, rgba(53, 203, 226, 0.4) 0%, rgba(53, 202, 226, 0) 100%);
+                                }
+                                span {
+                                    font-size: 1.6rem;
+                                    color: #FFFFFF;
+                                    margin-left: 1.2rem;
+                                    font-weight: 400;
+                                    line-height: 150%;
+                                }
+                        }
+                }
+        }
+
+        .area-image {
+            width: 100%;
+            max-width: 70.6rem;
+            margin-right: -17.4rem;
+                h2 {
+                    text-align: center;
+                    color: #FFFFFF;
+                    opacity: 0.4;
+                    font-weight: 600;
+                    margin-bottom: 6.7rem;
+                }
+                .image {
+                    position: relative;
+                    width: 100%;
+                    height: 54.1rem;
+                    top: 3.5rem;
+                     img {
+                        position: absolute;
+                     }
+                    .circle {
+                        top: 2.8rem;
+                        right: 4.3rem;
+                        z-index: 1;
+                        max-width: 55.3rem;
+                    } 
+                    .card-front{
+                        top: 4.1rem;
+                        left: 0;
+                        z-index: 3;
+                        max-width: 43.5rem;
+                    }
+                    .card-back {
+                        bottom: 4.6rem;
+                        right: 8.6rem;
+                        z-index: 2;
+                        max-width: 35.2rem;
+                    }
+                }
+        }
+
+        @include responsive(1440px){
+            .container {
+                .area-image {
+                    margin-right: -13.4rem;
+                }
+            }
+        }
+
+        @include responsive(1366px){
+            .container {
+                .area-image {
+                    margin-right: -9rem;
+                        .image {
+                            .card-back {
+                                right: 4rem;
+                            }
+                        }
+                }
+            }
+        }
+        @include responsive(1050px){
+            padding-top: 14.5rem;
+            height: 65.6rem;
+            .container {
+                .text {
+                    button {
+                        margin-bottom: 4.5rem;
+                    }
+                }
+                .area-image {
+                    margin-right: -3rem;
+                    h2 {
+                        margin-bottom: 1.5rem;
+                    }
+                        .image {
+                            height: 45rem;
+                            .card-front {
+                                max-width: 35rem;
+                                top: 8;
+                            }
+                            .card-back {
+                                max-width: 29rem;
+                                bottom: 0;
+                            }
+                            .circle {
+                                max-width: 46rem;
+                            }
+                        }
+                }
+            }
+        }
+        @include responsive(991px){
+            height: 89.1rem;
+            background-size: cover;
+            .container {
+                flex-direction: column;
+                align-items: center;
+
+                .text {
+                    @include flex (column, center, center);
+                    margin-bottom: 5rem;
+                    max-width: 65.8rem;
+                        h3 {
+                            text-align: center;
+                        }
+                        h1 {
+                            text-align: center;
+                            margin-bottom: 2.6rem;
+                        }
+                        button {
+                            margin-bottom: 3.9rem;
+                        }
+                }
+                .area-image {
+                    h2 {
+                        margin-bottom: 1.9rem;
+                    }
+                    .image {
+                        max-width: 51.1rem;
+                        margin: 0 auto;
+                        height: 42.4rem;
+                        top: 0;
+                            .circle {
+                                max-width: 42.9rem;
+                                top: 0;
+                                right: 1.3rem;
+                            }
+                            .card-front {
+                                max-width: 34rem;
+                                left: 0;
+                                top: 3.5rem;
+                            }
+                            .card-back {
+                                max-width: 27.4rem;
+                                bottom: 3.6rem;
+                                right: 2.9rem;
+                            }
+                    }
+                }
+            }
+        }
+        @include responsive(480px){
+            padding-top: 12.4rem;
+            height: 73.9rem;
+            .container {
+                 .text {
+                    h3 {
+                        font-size: 1.6rem;
+                        line-height: 120%;
+                        margin-bottom: 1.5rem;
+                    }
+                    h1 {
+                        font-size: 32px;
+                        line-height: 112%;
+                        margin-bottom: 3.7rem;
+                    }
+                    button {
+                        margin-bottom: 3.7rem;
+                    }
+                    ul{
+                        flex-direction: column;
+                        align-items: flex-start;
+                        max-width: 26rem;
+                        li {
+                            &:not(:last-child){
+                                margin-bottom: 1.7rem;
+                            }
+                            .icon {
+                                width: 2rem;
+                                height: auto;
+                                background-color: transparent;
+                            }
+                            span {
+                                br {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                 }
+                 .area-image {
+                    h2 {
+                        display: none;
+                    }
+                    .image {
+                        max-width: 30.5rem;
+                        height: 24.8rem;
+                        .circle {
+                            max-width: 26.7rem;
+                            right: 1.2rem;
+                        }
+                        .card-front{
+                            max-width: 21.1rem;
+                            top: 2.9rem;
+                        }
+                        .card-back{
+                            max-width: 17rem;
+                            bottom: 0;
+                            right: 1.8rem;
+                        }
+                    }
+                 }
+            }
+        }
+}
+
+.s-card-neon {
+    padding-top: 12.9rem;
+        .container {
+            @include flex (row, flex-start, space-between);
+        }
+        .left-area {
+            width: 100%;
+            max-width: 27.7rem;
+             .ilustra-mockup {
+                width: 100%;
+                max-width: 27.7rem;
+                position: relative;
+                margin-bottom: 12.9rem;
+                    .circle {
+                        position: absolute;
+                        max-width: 37.7rem;
+                        top: 87px;
+                        left: -214px;
+                        z-index: -1;
+
+                    }
+             }
+             .text {
+                @include flex (column, center, center);
+                .icon {
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 5px;
+                        height: 83px;
+                        top: -108px;
+                        left: 50%;
+                        margin-left: -2.5px;
+                        background: url(../img/points.svg) no-repeat center center;
+                    }
+                }
+                    .info-text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                            h3 {
+                                margin-top: 3.6rem;
+                                text-align: center;
+                                color: $grey-600;
+                            }
+                            p {
+                                text-align: center;
+                                font-size: 1.6rem;
+                                line-height: 150%;
+                                color: $grey-400;
+                                opacity: 0.8;
+                                margin-bottom: 2.6rem;
+                            }
+                            ul{
+                                li{
+                                    &:not(:last-child){
+                                        margin-bottom: 1.3rem;
+                                    }
+                                    img {
+                                        transition: all .3s;
+                                        &:hover {
+                                            transform: scale(1.02);
+                                        }
+                                    }
+                                }
+                            }
+                    }
+             }
+        }
+        .right-area {
+            width: 100%;
+            max-width: 80rem;
+            .main-txt {
+                margin-bottom: 14.4rem;
+                    h2 {
+                        max-width: 48.8rem;
+                        margin-bottom: 4.9rem;
+                        font-weight: 700;
+                        color:$grey-600;
+                    }
+                    ul {
+                            padding-bottom: 3.2rem;
+                        li{ 
+                            @include flex (row, center, space-between);
+                            padding: 3.3rem 0rem;
+                            border-bottom: 1px solid rgba(225, 224, 231, 0.9);
+                            &:first-child {
+                                padding-top: 0;
+                            }
+                            .info {
+                                display: flex;
+                                align-items: center;
+                                    .text {
+                                        margin-left: 4.4rem;
+                                         h3 {
+                                            color: $grey-400;
+                                         }
+                                         p {
+                                            font-weight: 400;
+                                            font-size: 1.8rem;
+                                            line-height: 150%;
+                                            color: $grey-300;
+                                         }
+                                    }
+                            }
+                        }
+                    }
+                    .btn{
+                        position: relative;
+                        display: inline-block;
+                        font-family: 'Poppins', sans-serif;
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                        line-height: 112%;
+                        letter-spacing: -0.5px;
+                        color: $brand-blue;
+                        transition: color .3s;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            right: -18px;
+                            bottom: 0;
+                            width: 10px;
+                            height: 3px;
+                            background-color: $brand-yellow;
+                        }
+                        &:hover{
+                            color: #028dff;
+                        }
+                    }
+            }
+
+            .box-card {
+                width: 100%;
+                height: 41rem;
+                background: url(../img/bg-box-card-neon.svg) no-repeat center center;
+                border-radius: 12px;
+                @include flex (row, center, space-between);
+                padding-left: 5.9rem;
+
+                .text {
+                    width: 100%;
+                    max-width: 38rem;
+
+                    h2 {
+                        color: #FFFFFF;
+                        margin-bottom: 1.1rem;
+                    }
+
+                    h3 {
+                        color: #FFFFFF;
+                        max-width: 327px;
+                        margin-bottom: 0.8rem;
+                    }
+                    p{
+                        max-width: 327px;
+                        font-weight: 400;
+                        font-size: 1.6rem;
+                        line-height: 150%;
+                        color: #FFFFFF;
+                        margin-bottom: 3.1rem;
+                    }
+
+                    .btns {
+                        display: flex;
+                        align-items: center;
+                        button {
+                            &:not(:first-child){
+                                margin-left: 1.6rem;
+                            }
+                        }
+                    }
+                }
+
+                .image {
+                    margin-right: -3.11rem;
+                }
+            }
+        }
+}
+
+.s-depoimentos {
+    padding-top: 13.4rem;
+.container {
+    .top {
+        @include flex(row, flex-end, space-between);
+        width: 100%;
+        h2 {
+            padding-bottom: 2rem;
+            span{
+                padding-bottom: 1.4rem;
+                display: block;
+                color: $grey-200;
+            }
+        }
+        .swiper-pagination {
+            position: relative;
+            width: 10%;
+            top: -35px;
+            .swiper-pagination-bullet{
+                width: 8.62px;
+                height: 7px;
+                background: $brand-yellow;
+                opacity: 0.3;
+                border-radius: 12px;
+                transition: all .3s;
+                &:not(:first-child){
+                    margin-left: 4.31px;
+                }
+                &-active {
+                    opacity: 1;
+                    width: 17.23px;
+                }
+            }
+        }
+    }
+
+    .slide-depoimentos {
+        overflow: hidden;
+        margin-top: 4rem;
+    }
+}
+}
+
+.s-conta-digital {
+        padding-top: 13.4rem;
+        padding-bottom: 15.4rem;
+    .container {
+        display: flex;
+        align-items: center;
+
+        .text {
+            width: 100%;
+            max-width: 54.2rem;
+            h2 {
+                margin-bottom: 4.5rem;
+                span {
+                    display: block;
+                    color: rgba(198, 197, 206, 0.8);
+                    margin-bottom: 0.9rem;
+                }
+            }
+            ul{
+                margin-bottom: 4.9rem;
+                li{
+                    display: flex;
+                    align-items: center;
+                    &:not(:last-child){
+                        margin-bottom: 3.7rem;
+                    }
+                    .icon {
+                        @include flex(row, center, center);
+                        margin-right: 2.6rem;
+                        background-color: $brand-green-light;
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 8px;
+                    }
+                    .info {
+                        h4 {
+                            margin-bottom: 0.4rem;
+                        }
+                        p {
+                            font-weight: 400;
+                            font-size: 1.8rem;
+                            line-height: 150%;
+                            color:$grey-300;
+
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .image {
+            position: relative;
+            width: 100%;
+            max-width: 71.2rem;
+            height: 59.8rem;
+            margin-right: -3.8rem;
+            left: 12.5rem;
+
+            img {
+                position: absolute;
+                &.mockup-01 {
+                    left: 0;
+                    bottom: 4.7rem;
+                    z-index: 2;
+                }
+                &.mockup-02 {
+                    top: 0.3rem;
+                    left: 25.8rem;
+                    z-index: 1;
+                }
+                &.circle-mockup {
+                    bottom: 0;
+                    right: 0;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+}
