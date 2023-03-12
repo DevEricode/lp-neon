@@ -668,6 +668,69 @@
         margin-top: 4rem;
     }
 }
+
+@include responsive (991px) {
+    .container {
+        padding: 0;
+        .top {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 5.1rem;
+                h2 {
+                    text-align: center;
+                    margin-bottom: 5.1rem;
+                }
+                .swiper-pagination {
+                    width: 40%;
+                }
+        }
+        .slide-depoimentos {
+            padding: 0 2.0rem;
+        } 
+    }
+}
+
+@include responsive (800px) {
+    .container {
+        padding: 0;
+        .slide-depoimentos {
+            padding: 0 2.0rem;
+        }
+    }
+}
+
+@include responsive (600px) {
+    .container {
+        padding: 0;
+        .slide-depoimentos {
+            padding: 0 2.0rem;
+        }
+    }
+}
+
+@include responsive (480px) {
+    padding-top: 7.6rem;
+    .container {
+        padding: 0;
+        .top {
+            margin-bottom: 3.4rem;
+            h2 {
+                font-size: 2.8rem;
+                font-weight: 600;
+                max-width: 28.5rem;
+                margin-bottom: 3.4rem;
+            }
+            span {
+                margin-bottom: 1.1rem;
+            }
+
+        }
+        .slide-depoimentos {
+            padding: 0 2.0rem;
+        }
+    }
+}
+
 }
 
 .s-conta-digital {
