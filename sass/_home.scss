@@ -830,8 +830,7 @@
             }
 
             .image {
-                left: 0;
-                right: 0;
+                left: 97px;
                 margin-top: 5.0rem;
             }
         }
@@ -844,6 +843,7 @@
                         max-width: 100%;
                     }
                     .image {
+                        left: 2.9rem;
                         max-width: 58.2rem;
                         height: 63.3rem;
                         img {
@@ -900,6 +900,7 @@
             .image {
                 max-width: 35.7rem;
                 height: 46.9rem;
+                left: 0;
                 img {
                     &.mockup-01, &.mockup-02 {
                         max-width: 16.8rem;
